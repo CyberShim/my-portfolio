@@ -1,0 +1,158 @@
+/* Подключаем Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* Общие стили */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #fff;
+  background-color: #0f0f0f;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: #121212;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #21ce99;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #21ce99;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover {
+  color: #21ce99;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Главная секция */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background: linear-gradient(to bottom, #0f0f0f, #121212);
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-section h2 {
+  font-size: 2.5rem;
+  color: #21ce99;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #21ce99, #18a76b);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.cta-btn:hover::before {
+  top: -20%;
+  left: -20%;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Колонки (карточки) */
+.card {
+  background: #1c1c1c;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s, box-shadow 0.5s;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #21ce99;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #ccc;
+}
+
+/* Появление элементов */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}

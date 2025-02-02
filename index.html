@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Креативный Сайт</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключение AOS и FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Шапка -->
+    <header>
+        <h1>Мой <span>Креативный Сайт</span></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главная секция -->
+    <section class="hero-section" data-aos="fade-up">
+        <div>
+            <h2>Привет, Я Yevhen Shymka</h2>
+            <p>Разрабатываю сайты с душой и безупречным стилем. Давайте создадим что-то удивительное!</p>
+            <a href="#portfolio" class="cta-btn">Посмотреть работы</a>
+        </div>
+    </section>
+
+    <!-- Карточки -->
+    <section class="cards">
+        <div class="card" data-aos="fade-right">
+            <h3>Уникальный Дизайн</h3>
+            <p>Каждый сайт — произведение искусства, созданное для вашего бизнеса.</p>
+        </div>
+        <div class="card" data-aos="fade-left">
+            <h3>Интерактивные Элементы</h3>
+            <p>Добавляю анимации и эффекты, которые удивляют пользователей.</p>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>Свяжитесь со мной: <i class="fab fa-github"></i> GitHub | <i class="fab fa-linkedin"></i> LinkedIn</p>
+    </footer>
+
+    <!-- Подключение AOS и инициализация -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true,
+        });
+    </script>
+</body>
+
+</html>
